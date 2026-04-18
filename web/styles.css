@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(53, 124, 165, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(255, 175, 123, 0.2), transparent 40%),
+    #f3f7fb;
+  color: #1f2a37;
+}
+
+.app-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 44px 18px 26px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Sora', 'Manrope', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #1d4762;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: #5a7285;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(48, 93, 130, 0.18);
+  border-radius: 18px;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow:
+    0 16px 40px rgba(24, 41, 58, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+}
+
+.field-row {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.field-group + .field-group {
+  margin-top: 14px;
+}
+
+label {
+  font-weight: 700;
+  color: #3d5a70;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+input {
+  border: 1px solid #aac0d2;
+  border-radius: 11px;
+  padding: 12px 13px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2a37;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(53, 124, 165, 0.2);
+  border-color: #357ca5;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 16px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+  cursor: pointer;
+  background: linear-gradient(135deg, #357ca5, #4b9cc7);
+  color: #fff;
+  box-shadow: 0 7px 18px rgba(53, 124, 165, 0.28);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(53, 124, 165, 0.32);
+  filter: brightness(1.02);
+}
+
+button.secondary {
+  background: #dde8f1;
+  color: #294154;
+  box-shadow: 0 6px 14px rgba(77, 109, 135, 0.2);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.status-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.status,
+.progress,
+.message {
+  min-height: 20px;
+  font-size: 0.9rem;
+}
+
+.status {
+  color: #2b5772;
+  font-weight: 600;
+}
+
+.progress {
+  color: #4d6778;
+}
+
+.message.success {
+  color: #0d6a43;
+}
+
+.message.error {
+  color: #aa2e2e;
+}
+
+.footer-note {
+  margin: 18px 0 0;
+  text-align: center;
+  color: #617b8f;
+  font-size: 0.82rem;
+  letter-spacing: 0.07em;
+  text-transform: lowercase;
+}
+
+@media (min-width: 760px) {
+  .field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .actions button {
+    min-width: 170px;
+  }
+}

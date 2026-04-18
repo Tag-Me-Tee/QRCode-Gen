@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
+    <title>qr_gen</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.dart.js"></script>
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <h1>Tag Me Tee</h1>
+      <p class="subtitle">QR code batch generator</p>
+    </header>
+
+    <section class="panel" aria-label="QR generation form">
+      <div class="field-group">
+        <label for="numberOfCodes">Number of QR Codes</label>
+        <input id="numberOfCodes" type="number" min="1" step="1" />
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label for="moduleSize">Module Size (px)</label>
+          <input id="moduleSize" type="number" min="1" step="1" />
+        </div>
+
+        <div class="field-group">
+          <label for="padding">Padding (px)</label>
+          <input id="padding" type="number" min="0" step="1" />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="baseUrl">Base URL</label>
+        <input id="baseUrl" type="text" />
+      </div>
+
+      <div class="actions">
+        <button id="generateButton" type="button">Generate QR Codes</button>
+        <button id="resetButton" type="button" class="secondary">Reset</button>
+      </div>
+
+      <div class="status-group">
+        <div id="statusText" class="status"></div>
+        <div id="progressText" class="progress"></div>
+        <div id="messageText" class="message"></div>
+      </div>
+    </section>
+
+    <p class="footer-note">All QR codes and updated ID list are saved inside the downloaded ZIP.</p>
+  </main>
+
+</body>
+</html>
